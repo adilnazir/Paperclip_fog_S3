@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :'Date of birth' %><br />
-    <%= f.date_select :dob %>
+    <%= f.date_select :dob,:order => [:day, :month, :year] ,:start_year => Time.now.year - 45,:end_year => Time.now.year, prompt: {:year=>Time.now.year - 45} %>
   </div>
   <div class="field">
     <%= f.label :Picture %><br />
